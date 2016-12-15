@@ -1,10 +1,10 @@
 var YOUTUBE_BASE_URL = "https://www.googleapis.com/youtube/v3/search";
+var playlistId = '';
 
 function displayYOUTUBESearchData(data) {
   var resultElement = '';
   if (data.items) {
-	var videoId = 'GKSRyLdjsPA';
-	resultElement = '<iframe width="560" height="315" src="https://www.youtube.com/embed/' + videoId +'" frameborder="0" allowfullscreen></iframe>'
+	resultElement = '<div>'+'<iframe margin= "auto" width="560" height="315" src="https://www.youtube.com/embed/videoseries?list='+ playlistId +'" frameborder="0" allowfullscreen></iframe>'+'</div>'
     data.items.forEach(function(item) {
      resultElement += '<p>' + item.snippet.title + '</p>';
     });
@@ -14,6 +14,7 @@ function displayYOUTUBESearchData(data) {
   }
   $('.js-search-results').html(resultElement);
 }
+//<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLPQF7GaDRVK8xdN3d2R0c5R3WkwZh12be" frameborder="0" allowfullscreen></iframe>
 
 var YOUTUBE_PLAYLIST_URL = "https://www.googleapis.com/youtube/v3/playlistItems";
 //Happy button functions
@@ -49,7 +50,8 @@ function watchSMButton(){
 		getPlaylistDataFromApi(displayYOUTUBESearchData,"PLv5Worys33PnkHXPseocm9ase7isPeBvt");
 	})
 }
-function getPlaylistDataFromApi(callback, playlistId) {
+function getPlaylistDataFromApi(callback, id) {
+	playlistId = id;
   var settings = {
     url: YOUTUBE_PLAYLIST_URL,
     data: {
