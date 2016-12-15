@@ -4,7 +4,7 @@ var playlistId = '';
 function displayYOUTUBESearchData(data) {
   var resultElement = '';
   if (data.items) {
-	resultElement = '<div>'+'<iframe margin= "auto" width="560" height="315" src="https://www.youtube.com/embed/videoseries?list='+ playlistId +'" frameborder="0" allowfullscreen></iframe>'+'</div>'
+	resultElement = '<div class="video">'+'<iframe src="https://www.youtube.com/embed/videoseries?list='+ playlistId +'" frameborder="0" allowfullscreen></iframe>'+'</div>'
     data.items.forEach(function(item) {
      resultElement += '<p>' + item.snippet.title + '</p>';
     });
