@@ -3,6 +3,8 @@ var YOUTUBE_BASE_URL = "https://www.googleapis.com/youtube/v3/search";
 function displayYOUTUBESearchData(data) {
   var resultElement = '';
   if (data.items) {
+	var videoId = 'GKSRyLdjsPA';
+	resultElement = '<iframe width="560" height="315" src="https://www.youtube.com/embed/' + videoId +'" frameborder="0" allowfullscreen></iframe>'
     data.items.forEach(function(item) {
      resultElement += '<p>' + item.snippet.title + '</p>';
     });
@@ -10,7 +12,6 @@ function displayYOUTUBESearchData(data) {
   else {
     resultElement += '<p>No results</p>';
   }
-  
   $('.js-search-results').html(resultElement);
 }
 
