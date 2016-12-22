@@ -14,14 +14,13 @@ function displayYOUTUBESearchData(data) {
   }
   $('.js-search-results').html(resultElement);
 }
-//<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLPQF7GaDRVK8xdN3d2R0c5R3WkwZh12be" frameborder="0" allowfullscreen></iframe>
 
 var YOUTUBE_PLAYLIST_URL = "https://www.googleapis.com/youtube/v3/playlistItems";
-//Happy button functions
 
+//Happy button functions
 function watchHappyButton(){
 	$('.happy').on('click', function(){
-		getPlaylistDataFromApi(displayYOUTUBESearchData, "PL4ziQDgKv4ErEK9Ey_qziU0IvtXNmwjzO");
+		getPlaylistDataFromApi(displayYOUTUBESearchData, "PLhHzl3We71fcyZAgLj5BVxj2tToDB8FGN");
 	})
 }
 //Sad Button Functions
@@ -30,8 +29,15 @@ function watchSadButton(){
 		getPlaylistDataFromApi(displayYOUTUBESearchData, "PLWlTX25IDqIy_HeO8BsOyt0wAhE9No3Nt");
 	})
 }
-//Ready for the Weekend Functions
 
+//Focused Button Functions
+function watchFocusButton(){
+	$('.focused').on('click', function(){
+		getPlaylistDataFromApi(displayYOUTUBESearchData, "PLsjOBvz-sHgrFE3FrGsC-eQ6BFoi7J3UG");
+	})
+}
+
+//Ready for the Weekend Functions
 function watchWeekendButton(){
 	$('.weekend').on('click', function(){
 		getPlaylistDataFromApi(displayYOUTUBESearchData, "PLMH3ZTvmk7EPkqTwd_ayk742IMJqY1tZb");
@@ -44,7 +50,6 @@ function watchPartyButton(){
 	})
 }
 //Sunday Morning Functions
-
 function watchSMButton(){
 	$('.sunday').on('click', function(){
 		getPlaylistDataFromApi(displayYOUTUBESearchData,"PLv5Worys33PnkHXPseocm9ase7isPeBvt");
@@ -67,6 +72,7 @@ function getPlaylistDataFromApi(callback, id) {
 }
 
 $(function(){
+	watchFocusButton();
 	watchPartyButton();
 	watchWeekendButton();
 	watchSMButton();

@@ -1,18 +1,53 @@
-body {
-  background-color: #de94e8;
+*{
+	box-sizing: inherit;
 }
-h1{
+body {
+  background-color: #0495d5;
+  color:#6e3b00;
+}
+h1 {
 	font-weight: bold;
 	font-family: 'Poiret One', cursive;
-	font-size: 35px;
-	padding-top: 35px;
-	padding-bottom: 35px;
+	font-size: 30px;
+	padding-top: 30px;
+	padding-bottom: 20px;
 	text-align: center;
 }
+h2 {
+	font-weight: bold;
+	font-family: 'Poiret One', cursive;
+	font-size: 28px;
+	text-align: center;
+}
+.facebook img{
+	width: 35px;
+	height: 35px;
+	padding-left: 50px;
+	padding-bottom: 10px;
+}
+.twitter img{
+	width: 50px;
+	height: 50px;
+	padding-left: 110px;
+}
+.social-media{
+	position: absolute;
+	bottom: 80px;
+	display: inline;
+}
+.youtube img{
+	position: absolute;
+	width: 110px;
+	height: 50px;
+	bottom: 15px;
+	left: 45px;
+}
 .header{
-	margin-left: auto;
-	margin-right: auto;
-	width: 400px;
+	position: absolute;
+	top: 0;
+	width: 200px;
+	height: 100%;
+	background-color: #FFE7CA
 }
 .main, .js-search-results{
 	margin-left: auto;
@@ -20,37 +55,45 @@ h1{
 	width: 400px;
 	padding-bottom: 20px;
 }
+.main p {
+	padding-top: 30px;
+	font-size: 30px;
+}
 p {
-	font-size: 20px;
+	font-size: 10px;
 	font-family: 'Poiret One', cursive;
 	text-align: center;
 	margin-top: 10px;
 }
 button {
-	border: 2px solid #ffffff;
+	border: 1px solid #BA986F;
 	border-radius: 10px;
-	background-color: #ffffff;
+	background-color: #BA986F;
 	width: 100px;
-	margin-top: 30px;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	display: inline-block;
-	font-family: sans-serif;
+	height: 60px;
+	display: inline;
+	font-family: 'Poiret One', cursive;
+	font-size: 18px;
+	font-weight: bold;
+	color: #064C6B;
 }
 .all-buttons{
 	margin-left: auto;
-	margin-right: auto;	
-	width: 320px;
+	margin-right: auto;
+	margin-top: 30px;
+	width: 360px;
 }
-.video{
+button.sunday{
+	margin-top: 20px;
+}
+.video button{
 	margin-left: auto;
 	margin-right: auto;	
-	width: 300px;
+	width: 360px;
 }
 
 @media only screen and (min-width: 640px){
 	.js-search-results p{
 	font-size: 30px;
-	color: yellow;
 }
 }
